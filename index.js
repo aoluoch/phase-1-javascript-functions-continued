@@ -15,12 +15,15 @@ console.log(mondayWork("work from home"));
 console.log(mondayWork("attend meetings"));
 
 
-function wrapAdjective(flair = "*"){
-    return function(adjective="special"){
-        return `You are ${flair} ${adjective} ${flair}`
+function wrapAdjective(flair = "*") {
+    return function(adjective = "special") {
+        return `You are ${flair}${adjective}${flair}!`;
     }
 }
 
-const encouragingPromptFunction = wrapAdjective("!!!")
-console.log(encouragingPromptFunction("%")("a dedicated programmer"))
+
+const encouragingPromptFunction = wrapAdjective("!!!");
+console.log(encouragingPromptFunction()); 
+console.log(encouragingPromptFunction("amazing")); 
+
 
